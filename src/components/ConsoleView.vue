@@ -207,7 +207,7 @@ function getFileContents(path: string) {
   }
 
   const parts = path.split('/').filter(Boolean)
-  const filename = parts.slice(-1)
+  const filename = parts.slice(-1)[0]
   const dirPath = parts.slice(0, -1).join('/')
   const dir = getDirectory('/' + dirPath)
 
